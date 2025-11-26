@@ -1,1 +1,1 @@
-![Logo](./assets/Logo.png) ### Client
+![Logo](./assets/Logo.png)
