@@ -2,123 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project Cloud</title>
+    <title>Project Cloud - Ultimate Minecraft PVP Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Cloud - The most advanced PVP modpack for Minecraft with exceptional visuals and infinite customization">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 </head>
 <body>
-    <div class="header" id="home">
-        <div class="header-center">
-            <img src="assets/favicon-32x32.png">
-            <ul>
-                <li><a href="#home" style="text-decoration: none;">Home</a></li>
-                <li><a href="#features" style="text-decoration: none;">Features</a></li>
-                <li><a href="#download" style="text-decoration: none;">Download</a></li>
-                <li><a href="https://discord.gg/cYNqNEG7Ks" style="text-decoration: none;">Discord</a></li>
-                <li><a href="/" style="text-decoration: none;">Faq</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/favicon-32x32.png" alt="Project Cloud Logo">
+                <span>Project Cloud</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+                <li><a href="https://discord.gg/cYNqNEG7Ks" class="nav-link" target="_blank">Discord <i class="fas fa-external-link-alt"></i></a></li>
             </ul>
-        </div>
-    </div>
-    <div class="main">
-        <div class="main-center">
-            <div class="top">
-                <h1>Project Cloud</h1>
-                <p>The most advanced PVP modpack ever.</p>
-            </div>
-            <div class="middle">
-                <div class="middle-center">
-                    <img src="assets/ingame/titlescreen.PNG">
-                </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </div>
-    <div class="info" id="features">
-        <div class="info-center">
-            <div class="info-list">
-                <div>
-                    <h1>NeoForge & Fabric Based</h1>
-                    <p>Unlike most other modpacks, Project Cloud is a fabric and neoforge modpack, allowing you to use it in combination with countless other modifications and fps mods!</p>
-                </div>
-                <div>
-                    <h1>Who made it?</h1>
-                    <p>The modpack made by CloudedMC.</p>
-                </div>
-                <div>
-                    <h1>25+ Mods</h1>
-                    <p>There is no need to worry about customizability!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="editor">
-        <div class="editor-center">
-            <div class="editor-list">
-                <div>
-                    <h1>Draggable Mods</h1>
-                    <img src="assets/ingame/mods.PNG">
-                </div>
-                <div>
-                    <h1>Advanced ModMenu</h1>
-                    <img src="assets/ingame/editor.PNG">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="visuals">
-        <div class="visuals-center">
-            <div class="visuals-list">
-                <div>
-                    <h1>Exceptional Visuals</h1>
-                    <p>Project cloud is packed with incredibly eye appealing visuals, like blurred and rounded interfaces. Our client also comes with smooth UI animations, never seen in a PVP modpack before.</p>
-                </div>
-                <div>
-                    <img src="ProjectCloud/assets/ingame/visuals.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="customize">
-        <div class="customize-center">
-            <div class="customize-panel">
-                <div class="customize-list">
-                    <div>
-                        <h1>Infinite Customization</h1>
-                        <p>With over 50+ different Settings, including Checkboxes, Sliders, ModePickers and ColorPickers and more, there is no need to worry about customizability.</p>
-                    </div>
-                    <div>
-                        <img src="assets/ingame/colorpicker.PNG">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="download" id="download">
-        <div class="download-center">
-            <h1>Are you ready for the ultimate minecraft experience?</h1>
-            <div>
-                <p><a href="downloads" style="text-decoration: none;">Download Modpack</a></p>
-            </div>
-            <div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Project Cloud</h1>
+                <p class="hero-subtitle">The Ultimate Minecraft PVP Experience</p>
+                <p class="hero-description">Advanced performance, stunning visuals, and endless customization in one powerful modpack.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">Download Now</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <img src="assets/ingame/titlescreen.PNG" alt="Project Cloud in action">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="end">
-        <div class="end-center">
-            <div class="end-list">
-                <div>
-                    <p>CloudedMC &copy 2024</p>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Project Cloud?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Dual Platform Support</h3>
+                    <p>Built on both NeoForge and Fabric, giving you maximum compatibility with other mods and optimal performance.</p>
                 </div>
-                <div>
-                    <p>All rights reserved.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>25+ Optimized Mods</h3>
+                    <p>Carefully selected and configured mods that work seamlessly together for the best PVP experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Stunning Visuals</h3>
+                    <p>Beautiful blurred interfaces, smooth animations, and modern UI design that enhances your gameplay.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Endless Customization</h3>
+                    <p>Over 50+ settings including checkboxes, sliders, mode pickers and color pickers to make it truly yours.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <img src="assets/ingame/mods.PNG" alt="Draggable Mods Interface">
+                        <div class="gallery-overlay">
+                            <h3>Draggable Mods</h3>
+                            <p>Organize your mods with an intuitive drag-and-drop interface</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <img src="assets/ingame/editor.PNG" alt="Advanced ModMenu">
+                        <div class="gallery-overlay">
+                            <h3>Advanced ModMenu</h3>
+                            <p>Powerful configuration tools at your fingertips</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <img src="assets/ingame/visuals.png" alt="Exceptional Visuals">
+                        <div class="gallery-overlay">
+                            <h3>Exceptional Visuals</h3>
+                            <p>Beautiful UI with smooth animations and effects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-card">
+                        <img src="assets/ingame/colorpicker.PNG" alt="Color Picker">
+                        <div class="gallery-overlay">
+                            <h3>Color Customization</h3>
+                            <p>Fine-tune every aspect with advanced color pickers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Optimized Mods</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Customization Options</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Platforms Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="section-title">Ready to Elevate Your Game?</h2>
+                <p class="download-description">Join thousands of players who have transformed their Minecraft experience with Project Cloud.</p>
+                <div class="download-options">
+                    <a href="downloads" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Modpack</span>
+                    </a>
+                    <a href="https://discord.gg/cYNqNEG7Ks" class="discord-btn" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <span>Join Our Discord</span>
+                    </a>
+                </div>
+                <div class="download-info">
+                    <div class="info-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Regular Updates</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safe & Secure</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Full Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/favicon-32x32.png" alt="Project Cloud Logo">
+                        <span>Project Cloud</span>
+                    </div>
+                    <p>The most advanced PVP modpack for Minecraft</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/cYNqNEG7Ks" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Project</h4>
+                        <a href="#home">Home</a>
+                        <a href="#features">Features</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">FAQ</a>
+                        <a href="https://discord.gg/">Discord</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CloudedMC. All rights reserved.</p>
+                <p>Minecraft is a trademark of Mojang Studios. This project is not affiliated with Mojang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
