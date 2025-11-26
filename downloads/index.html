@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Cloud - Downloads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Project Cloud - The most advanced PVP modpack for Minecraft">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4b6eeb;
+            --primary-dark: #3a5bd9;
+            --secondary: #9176e3;
+            --accent: #00ffff;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+            --background: #0a0a1a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient-hover: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .downloads-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+        }
+
+        .download-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .download-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .download-hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .download-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .download-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .platform-logo {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .recommended-badge {
+            background: var(--accent);
+            color: var(--background);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .version-badge {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .card-content {
+            margin-bottom: 2rem;
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-list i {
+            color: var(--accent);
+        }
+
+        .card-footer {
+            text-align: center;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .modrinth-btn {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .modrinth-btn:hover {
+            background: var(--gradient-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(75, 110, 235, 0.3);
+        }
+
+        .github-btn {
+            background: #333;
+            color: white;
+            border: 2px solid #444;
+        }
+
+        .github-btn:hover {
+            background: #444;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .installation-guide {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .installation-guide h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+        }
+
+        .support-section {
+            text-align: center;
+            background: var(--gradient);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+        }
+
+        .support-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .support-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .discord-support-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .discord-support-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .downloads-container {
+                padding: 100px 20px 40px;
+            }
+
+            .download-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .download-options {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--background);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-link {
+                padding: 1rem;
+                display: block;
+            }
+
+            .installation-guide {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .download-hero h1 {
+                font-size: 2rem;
+            }
+
+            .download-card {
+                padding: 1.5rem;
+            }
+
+            .installation-guide h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-card, .installation-guide, .support-section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .download-card:nth-child(1) { animation-delay: 0.1s; }
+        .download-card:nth-child(2) { animation-delay: 0.2s; }
+        .installation-guide { animation-delay: 0.3s; }
+        .support-section { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-cloud"></i>
+                Project Cloud
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="downloads.html" class="nav-link">Download</a></li>
+                <li><a href="https://discord.gg/cYNqNEG7Ks" class="nav-link" target="_blank">Discord</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Downloads Content -->
+    <div class="downloads-container">
+        <div class="download-hero">
+            <h1>Download Project Cloud</h1>
+            <p>Get the latest version of our advanced PVP modpack</p>
+        </div>
+
+        <div class="download-options">
+            <!-- Modrinth Card -->
+            <div class="download-card">
+                <div class="card-header">
+                    <div class="platform-logo">
+                        <i class="fab fa-modrinth"></i>
+                    </div>
+                    <h3>Modrinth</h3>
+                    <span class="recommended-badge">Recommended</span>
+                </div>
+                <div class="card-content">
+                    <p>Download directly from Modrinth for automatic updates and dependency management.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Automatic dependency resolution</li>
+                        <li><i class="fas fa-check"></i> Version management</li>
+                        <li><i class="fas fa-check"></i> Community reviews</li>
+                        <li><i class="fas fa-check"></i> Safe and verified</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://modrinth.com/project/projectcloud" class="download-btn modrinth-btn" target="_blank">
+                        <i class="fab fa-modrinth"></i>
+                        Download from Modrinth
+                    </a>
+                </div>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="download-card">
+                <div class="card-header">
+                    <div class="platform-logo">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Releases</h3>
+                    <span class="version-badge">Latest</span>
+                </div>
+                <div class="card-content">
+                    <p>Get the latest release directly from our GitHub repository.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Direct download</li>
+                        <li><i class="fas fa-check"></i> Release notes</li>
+                        <li><i class="fas fa-check"></i> Source code access</li>
+                        <li><i class="fas fa-check"></i> All versions available</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/CloudedMC/ProjectCloud/releases/latest" class="download-btn github-btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Download from GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installation Instructions -->
+        <div class="installation-guide">
+            <h2>Installation Guide</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Download Prism Launcher</h3>
+                        <p>Install Prism Launcher or any modloader that supports Modrinth modpacks.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Instance</h3>
+                        <p>Click "Add Instance" and select "Download from Modrinth".</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Search for Project Cloud</h3>
+                        <p>Type "Project Cloud" in the search bar and select our modpack.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Install & Play</h3>
+                        <p>Click "OK" and launch your new instance. Enjoy!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support-section">
+            <div class="support-content">
+                <h2>Need Help?</h2>
+                <p>Join our Discord community for support and updates</p>
+                <a href="https://discord.gg/cYNqNEG7Ks" class="discord-support-btn" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    Join Discord Server
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(10, 10, 26, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 26, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.download-card, .installation-guide, .support-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Add click tracking for download buttons
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const platform = this.classList.contains('modrinth-btn') ? 'modrinth' : 'github';
+                console.log(`Download clicked: ${platform}`);
+                // You can add analytics tracking here
+            });
+        });
+    </script>
+</body>
+</html>
